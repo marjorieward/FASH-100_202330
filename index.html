@@ -7,12 +7,16 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script>
-	function handleClick(filename) { // Step 1 - Parameterize the function
-        return function() { // Step 2 - Put body in "return function() {...}"
-        $('#modal-body').load('filename');
-  		$('#myModal').modal('show'); // Step 3 - Parameterize the body.
-        } // (closing brace for step 2)
-      } 
+    $(document).ready(function(){
+        $('#btn01').click(function(){
+			$('#modal-body').load('div-1.html');
+            $('#myModal').modal('show');
+        });
+		$('#btn02').click(function(){
+			$('#modal-body').load('div-2.html');
+            $('#myModal').modal('show');
+        });
+    });
 </script>
 <style>
     .bs-example{
@@ -23,7 +27,7 @@
 <body>
 <div class="bs-example">
     <!-- Button HTML (to Trigger Modal) -->
-    <button id="btn01" type="button" class="btn btn-lg btn-primary" onClick="$(document).ready(handleClick(div-1.html));">Modal One</button>
+    <button id="btn01" type="button" class="btn btn-lg btn-primary">Modal One</button>
 	<button id="btn02" type="button" class="btn btn-lg btn-primary">Modal Two</button>
  
     <!-- Modal HTML -->
