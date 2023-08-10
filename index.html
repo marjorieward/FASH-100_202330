@@ -16,6 +16,7 @@
  
     <div class="nav">
 		<a href="#" id="template01">Template 1</a>
+		<a href="#" id="template02">Template 2</a>
 	</div>
 	<div id="loadtemplate">place template here
 	</div>
@@ -38,8 +39,8 @@
             });
  
             // Same as above
-            $('#div-2').click(function () {
-                $(this).load('div-2.html');
+            $('#template02').click(function () {
+                $('#loadtemplate').load('div-2.html');
             });
         });
     </script>
