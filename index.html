@@ -1,69 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
- 
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content=
-        "width=device-width, initial-scale=1.0">
- 
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
- 
-    <!-- Some CSS -->
-    <style>
-        div {
-            border: 2px solid green;
-            width: fit-content;
-            margin: 20px auto;
-            padding: 2px 20px;
-            cursor: pointer;
-        }
- 
-        p {
-            font-size: 14px;
-        }
-    </style>
+<meta charset="utf-8">
+<title>Modals and HTML Insertion</title>
+<link href="ModalInsert.css" rel="stylesheet" type="text/css">
 </head>
- 
+
 <body>
- 
-    <!-- First div -->
-    <div id="div-1">
-        First Div
-        <p>Click to load first html</p>
-    </div>
- 
-    <!-- Second div -->
-    <div id="div-2">
-        Second div
-        <p>Click to load first html</p>
-    </div>
- 
-    <!-- Script -->
-    <script>
- 
-        // Check if file is completely ready
-        $(document).ready(function () {
- 
-            // Adding click event on id div-1
-            // if it clicked then anonymous
-            // function will be called
-            $('#div-1').click(function () {
- 
-                // Load the external html
-                // here this refers to
-                // current selector
-                $(this).load('div-1.html');
-            });
- 
-            // Same as above
-            $('#div-2').click(function () {
-                $(this).load('div-2.html');
-            });
-        });
-    </script>
+	<!-- Trigger/Open The Modal -->
+<h1>Click the Button Below</h1>
+	<button id="myBtn" onClick="loadHtml('template', 'New1.html')">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="template2" class="template">Content Pull
+	  </div> 
+  </div>
+</div>
+	<div id="template">Insert text
+	  </div>
+	<script>
+	// Get the modal
+var modal = document.getElementById("myModal");
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+function openModal(){
+	modal.style.display = "block";
+}
+
+function loadHtml(id, filename){
+	var xhttp;
+	var element = document.getElementById(id);
+	var file = filename;
+	if (file){
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if (this.readyState == 4){
+				if(this.status == 200) {element.innerHTML = this.responseText;}
+				if(this.status == 404) {element.innerHTML = "<h1>Page not found.</h1>";}
+			}
+		}
+		xhttp.open("GET", 'templates/${file}', true);
+		xhttp.send();
+		return;
+	}
+	
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+	</script>
 </body>
- 
 </html>
