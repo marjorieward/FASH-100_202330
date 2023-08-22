@@ -254,6 +254,8 @@ em {
 .modal-body {
 	height: 45vh;
 	width: 80%;
+	 margin-left: auto;
+  margin-right: auto;
 	padding: 2px 16px;
 	overflow-y:auto;
 }
