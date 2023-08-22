@@ -253,6 +253,7 @@ em {
 
 .modal-body {
 	height: 45vh;
+	width: 80%;
 	padding: 2px 16px;
 	overflow-y:auto;
 }
