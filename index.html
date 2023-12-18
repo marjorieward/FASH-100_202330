@@ -8,8 +8,9 @@
 <script>
 $(document).ready(function(){
   $('#216shirt').click(function(){
-	$('#courseID').empty();
-	 $('#courseID').load('/216ShirtContent.html');
+	$.get('FASH216CourseNumber.txt', function(data){
+		$('#courseID').html(data);
+	})
      });
 });
 	</script>
