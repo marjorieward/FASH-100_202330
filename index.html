@@ -9,10 +9,10 @@
 <script>
 $(document).ready(function(){
   $('#216shirt').click(function(){
-	$('#prof').load('216ShirtContent.html #prof');
-	$('#courseID').load('216ShirtContent.html #courseID');
-	$('#assignName').load('216ShirtContent.html #assignName');
-	$('#dueDate').load('216ShirtContent.html #dueDate');
+	$('.prof').load('216ShirtContent.html #prof');
+	$('.courseID').load('216ShirtContent.html #courseID');
+	$('.assignName').load('216ShirtContent.html #assignName');
+	$('.dueDate').load('216ShirtContent.html #dueDate');
      });
 });
 	</script>
@@ -26,17 +26,17 @@ $(document).ready(function(){
 <!--BRIEF CONTENT STARTS HERE--->
 	<div class="idBox">
 	<div class="textbox">
-	<h1 id="assignName">Placeholder Title</h1>
+	<h1 class="assignName">Placeholder Title</h1>
 	<h4>Assignment Identification</h4>
 	<ul>
 	<li>Professor name:
-		<span class="liText" id="prof"></span></li>
+		<span class="liText prof"></span></li>
 	<li>Course ID: 
-		<span class="liText" id="courseID"></span></li>
+		<span class="liText courseID"></span></li>
 	<li>Assignment name: 
-		<span class="liText" id="assignName"></span></li>
+		<span class="liText assignName"></span></li>
 	<li>Due date: 
-		<span class="liText" id="dueDate">Submission date and time.</span></li>
+		<span class="liText dueDate">Submission date and time.</span></li>
 	</ul>
 	</div>
 	</div>
