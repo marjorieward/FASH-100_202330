@@ -8,9 +8,11 @@
 <script>
 $(document).ready(function(){
   $('#216shirt').click(function(){
-	$.get('FASH216CourseNumber.txt', function(data){
-		$('#courseID').html(data);
-	})
+	  $.getJSON('FASH216ShirtBrief.json', function(jd) {
+          $('#courseID').text('jd.course');
+          $('#prof').text('jd.prof');
+          $('#assignmentName').text('jd.assignName');
+        });
      });
 });
 	</script>
