@@ -9,8 +9,8 @@
 $(document).ready(function(){
   $('#216shirt').click(function(){
 	  $.getJSON('FASH216ShirtBrief.json', function(jd) {
-          $('#courseID').text('jd.course');
           $('#prof').text('jd.prof');
+	  $('#courseID').text('jd.course');
           $('#assignmentName').text('jd.assignName');
         });
      });
@@ -30,11 +30,11 @@ $(document).ready(function(){
 	<h4>Assignment Identification</h4>
 	<ul>
 	<li>Professor name:
-		<span class="liText">Marjorie Ward</span></li>
+		<span class="liText" id="prof">Marjorie Ward</span></li>
 	<li>Course ID: 
 		<span class="liText" id="courseID">Subject code, course number, and section.</span></li>
 	<li>Assignment name: 
-		<span class="liText">Clear, memorable, descriptive title that connects to deliverable(s).</span></li>
+		<span class="liText" id="assignmentName">Clear, memorable, descriptive title that connects to deliverable(s).</span></li>
 	<li>Due date: 
 		<span class="liText">Submission date and time.</span></li>
 	</ul>
