@@ -2,10 +2,26 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Text inside Divs</title>
+<title>Level Up Briefs</title>
 <link href="textInsideDivs.css" rel="stylesheet" type="text/css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+window.addEventListener('load', function() {
+  // wait until the page loads before working with HTML elements
+  document.addEventListener('click', function(event) {
+    //click listener on the document
+    document.querySelectorAll('.dropdown-content').forEach(function(el) {
+      if (el !== event.target) el.classList.remove('show')
+      // close any showing dropdown that isn't the one just clicked
+    });
+    if (event.target.matches('.dropbtn')) {
+      event.target.closest('.dropdown').querySelector('.dropdown-content').classList.toggle('show')
+    }
+    // if this is a dropdown button being clicked, toggle the show class
+  })
+})
+</script>
 <script>
 $(document).ready(function(){
   $('#216shirt').click(function(){
@@ -42,33 +58,117 @@ $(document).ready(function(){
 	$('.feedback').load('216TrouserContent.html #feedback');
 	$('.rubric').load('216TrouserContent.html #rubric');
      });
-  $('#216bfive').click(function(){
-	$('.prof').load('216BasicFive.html #prof');
-	$('.courseID').load('216BasicFive.html #courseID');
-	$('.assignName').load('216BasicFive.html #assignName');
-	$('.dueDate').load('216BasicFive.html #dueDate');
-	$('.objectives').load('216BasicFive.html #objectives');
-	$('.audience').load('216BasicFive.html #audience');
-	$('.deliverables').load('216BasicFive.html #deliverables');
-	$('.phases').load('216BasicFive.html #phases');
-	$('.tools').load('216BasicFive.html #tools');
-	$('.presentation').load('216BasicFive.html #presentation');
-	$('.requirements').load('216BasicFive.html #requirements');
-	$('.criteria').load('216BasicFive.html #criteria');
-	$('.weight').load('216BasicFive.html #weight');
-	$('.feedback').load('216BasicFive.html #feedback');
-	$('.rubric').load('216BasicFive.html #rubric');
+   $('#316waist').click(function(){
+	$('.prof').load('316WaistDress.html #prof');
+	$('.courseID').load('316WaistDress.html #courseID');
+	$('.assignName').load('316WaistDress.html #assignName');
+	$('.dueDate').load('316WaistDress.html #dueDate');
+	$('.objectives').load('316WaistDress.html #objectives');
+	$('.audience').load('316WaistDress.html #audience');
+	$('.deliverables').load('316WaistDress.html #deliverables');
+	$('.phases').load('316WaistDress.html #phases');
+	$('.tools').load('316WaistDress.html #tools');
+	$('.presentation').load('316WaistDress.html #presentation');
+	$('.requirements').load('316WaistDress.html #requirements');
+	$('.criteria').load('316WaistDress.html #criteria');
+	$('.weight').load('316WaistDress.html #weight');
+	$('.feedback').load('316WaistDress.html #feedback');
+	$('.rubric').load('316WaistDress.html #rubric');
      });
+  $('#316explore').click(function(){
+	$('.prof').load('316FabricExplore.html #prof');
+	$('.courseID').load('316FabricExplore.html #courseID');
+	$('.assignName').load('316FabricExplore.html #assignName');
+	$('.dueDate').load('316FabricExplore.html #dueDate');
+	$('.objectives').load('316FabricExplore.html #objectives');
+	$('.audience').load('316FabricExplore.html #audience');
+	$('.deliverables').load('316FabricExplore.html #deliverables');
+	$('.phases').load('316FabricExplore.html #phases');
+	$('.tools').load('316FabricExplore.html #tools');
+	$('.presentation').load('316FabricExplore.html #presentation');
+	$('.requirements').load('316FabricExplore.html #requirements');
+	$('.criteria').load('316FabricExplore.html #criteria');
+	$('.weight').load('316FabricExplore.html #weight');
+	$('.feedback').load('316FabricExplore.html #feedback');
+	$('.rubric').load('316FabricExplore.html #rubric');
+     });
+  $('#316shapes').click(function(){
+	$('.prof').load('316Shapes.html #prof');
+	$('.courseID').load('316Shapes.html #courseID');
+	$('.assignName').load('316Shapes.html #assignName');
+	$('.dueDate').load('316Shapes.html #dueDate');
+	$('.objectives').load('316Shapes.html #objectives');
+	$('.audience').load('316Shapes.html #audience');
+	$('.deliverables').load('316Shapes.html #deliverables');
+	$('.phases').load('316Shapes.html #phases');
+	$('.tools').load('316Shapes.html #tools');
+	$('.presentation').load('316Shapes.html #presentation');
+	$('.requirements').load('316Shapes.html #requirements');
+	$('.criteria').load('316Shapes.html #criteria');
+	$('.weight').load('316Shapes.html #weight');
+	$('.feedback').load('316Shapes.html #feedback');
+	$('.rubric').load('316Shapes.html #rubric');
+     });
+  $('#316jacket').click(function(){
+	$('.prof').load('316NotchedJacket.html #prof');
+	$('.courseID').load('316NotchedJacket.html #courseID');
+	$('.assignName').load('316NotchedJacket.html #assignName');
+	$('.dueDate').load('316NotchedJacket.html #dueDate');
+	$('.objectives').load('316NotchedJacket.html #objectives');
+	$('.audience').load('316NotchedJacket.html #audience');
+	$('.deliverables').load('316NotchedJacket.html #deliverables');
+	$('.phases').load('316NotchedJacket.html #phases');
+	$('.tools').load('316NotchedJacket.html #tools');
+	$('.presentation').load('316NotchedJacket.html #presentation');
+	$('.requirements').load('316NotchedJacket.html #requirements');
+	$('.criteria').load('316NotchedJacket.html #criteria');
+	$('.weight').load('316NotchedJacket.html #weight');
+	$('.feedback').load('316NotchedJacket.html #feedback');
+	$('.rubric').load('316NotchedJacket.html #rubric');
+     });
+ $('#316runway').click(function(){
+	$('.prof').load('316Runway.html #prof');
+	$('.courseID').load('316Runway.html #courseID');
+	$('.assignName').load('316Runway.html #assignName');
+	$('.dueDate').load('316Runway.html #dueDate');
+	$('.objectives').load('316Runway.html #objectives');
+	$('.audience').load('316Runway.html #audience');
+	$('.deliverables').load('316Runway.html #deliverables');
+	$('.phases').load('316Runway.html #phases');
+	$('.tools').load('316Runway.html #tools');
+	$('.presentation').load('316Runway.html #presentation');
+	$('.requirements').load('316Runway.html #requirements');
+	$('.criteria').load('316Runway.html #criteria');
+	$('.weight').load('316Runway.html #weight');
+	$('.feedback').load('316Runway.html #feedback');
+	$('.rubric').load('316Runway.html #rubric');
+     });
+	
 });
 	</script>
 </head>
 
 <body>
-<!--ASSIGNMENT BUTTONS--->
-	<button class="neobutton" id="216bfive">Basic Five Sloper Drafts</button>
-	<button class="neobutton" id="216shirt">Runway Shirt/Blouse Recreation</button>
-	<button class="neobutton" id="216trouser">Runway Trousers Recreation</button>
-	
+<!---NAVBAR--->
+	<div class="navbar">
+	<div class="dropdown">
+  <a href="#" class="nav-link dropbtn">FASH 216</a>
+  <div class="dropdown-content">
+    <button id="216shirt">Runway Shirt/Blouse Recreation</button>
+    <a href="216trouser" class="nav-link">Contact</a>
+  </div>
+</div>
+
+
+<div class="dropdown">
+  <a href="#" class="nav-link dropbtn">FASH 316</a>
+  <div class="dropdown-content">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+</div>
+</div>
 <!--BRIEF CONTENT STARTS HERE--->
 	<div class="idBox">
 	<div class="textbox">
