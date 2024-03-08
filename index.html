@@ -24,7 +24,25 @@ window.addEventListener('load', function() {
 </script>
 <script>
 $(document).ready(function(){
- $('#216b5').click(function(){
+ $('#100skirt').click(function(){
+	$('.prof').load('100Skirt.html #prof');
+	$('.courseID').load('100Skirt.html #courseID');
+	$('.assignName').load('100Skirt.html #assignName');
+	$('.dueDate').load('100Skirt.html #dueDate');
+	$('.objectives').load('100Skirt.html #objectives');
+	$('.audience').load('100Skirt.html #audience');
+	$('.deliverables').load('100Skirt.html #deliverables');
+	$('.phases').load('100Skirt.html #phases');
+	$('.parameters').load('100Skirt.html #parameters');
+	$('.tools').load('100Skirt.html #tools');
+	$('.presentation').load('100Skirt.html #presentation');
+	$('.requirements').load('100Skirt.html #requirements');
+	$('.criteria').load('100Skirt.html #criteria');
+	$('.weight').load('100Skirt.html #weight');
+	$('.feedback').load('100Skirt.html #feedback');
+	$('.rubric').load('100Skirt.html #rubric');
+     });
+$('#216b5').click(function(){
 	$('.prof').load('216BasicFive.html #prof');
 	$('.courseID').load('216BasicFive.html #courseID');
 	$('.assignName').load('216BasicFive.html #assignName');
@@ -176,6 +194,12 @@ $(document).ready(function(){
 <body>
 <!---NAVBAR--->
 	<div class="navbar">
+	<div class="dropdown">
+  <a href="#" class="nav-link dropbtn">FASH 100</a>
+  <div class="dropdown-content">
+<a href="#" class="nav-link" id="100skirt">Skirt Project</a>
+  </div>
+</div>
 	<div class="dropdown">
   <a href="#" class="nav-link dropbtn">FASH 216</a>
   <div class="dropdown-content">
